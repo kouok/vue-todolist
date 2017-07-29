@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
-	<title>学员留言册</title>
+	<title>学员留言册2</title>
 	<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, maximum-scale = 1.0, minimum-scale=1.0,initial-scale=1.0">
 	<link rel="stylesheet" href="lib/css/bootstrap.css">
 	<script src="lib/js/jquery-3.2.1.min.js"></script>
@@ -17,7 +17,8 @@
 					arr:[],
 					username:"",
 					age:"",
-					nowIndex:-100
+					nowIndex:-100,
+					a:true
 				},
 				methods:{
 					add:function(){
@@ -28,6 +29,10 @@
 						this.username="";
 						this.age="";
 							
+					},
+					remove:function(){
+						
+						
 					}
 				}
 			});
@@ -52,7 +57,7 @@
 	</form>
 	<hr	>
 	<table class="table table-bordered text-center table-hover" width="100%">
-		<caption class="h3 text-info">用户信息表</caption>
+		<caption class="h3 text-info">用户信息表3</caption>
 		<tr>
 			<th class="text-center">序号</th>
 			<th class="text-center">姓名</th>
@@ -66,7 +71,7 @@
 			<td><input type="button" class="btn btn-danger btn-sm" data-toggle="modal"   data-target="#myModal" value="删除"></td>
 		</tr>
 
-		<tr>
+		<tr v-show="arr.length==0">
 			<td colspan="4" class="text-muted">暂无数据！</td>
 		</tr>
 	</table>
