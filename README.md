@@ -1,4 +1,6 @@
-# vue-todolist
+[TOC]
+
+## vue-todolist
 
 该项目是vue的初级项目，主要是使用vue来实现动态添加删除数据
 
@@ -8,14 +10,14 @@
 
 快速添加学员姓名和工作
 
-# 项目介绍
+## 项目介绍
 
 一个好的开始
 
-# 使用markdown来写GitHub
+## 使用markdown来写GitHub
 so,这样readme将会更加方便美观
 
-#使用`git bash` 来将本地文件同步到GitHub上
+## 使用`git bash` 来将本地文件同步到GitHub上
 + 记住git的一些命令即可
 + 将文件上传到GitHub的方法如下
     * `git add <文件名>` 该命令将文件添加到暂存区,文件名对大小写敏感
