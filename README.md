@@ -1,5 +1,3 @@
-[TOC]
-
 ## vue-todolist
 
 该项目是vue的初级项目，主要是使用vue来实现动态添加删除数据
