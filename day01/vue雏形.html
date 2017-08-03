@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue雏形</title>
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, maximum-scale = 1.0, minimum-scale=1.0,initial-scale=1.0">
+    <script src="../lib/js/vue.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:"#box",
+                //data为json数据
+                data:{
+                    message:"Hello,world!!",
+                    news:"vue.js还是很容易入手的",
+                    arr:[],
+                    fname:"",
+                    json:{a:"apple",b:"orange",c:"Tomoat"},
+                    a:true
+                },
+                methods:{
+                    one:function(){
+                        var div=document.getElementById("div1");
+                        // console.log(div1.style.display);
+                        if(div1.style.display=="block"){
+                            this.a=false;
+                        }else{
+                            this.a=true;
+                        }
+                        // console.log();
+                        // console.log(document.getElementsByTagName("button")[0].innerHTML);
+                    }
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <!-- //主要是学习vue的指令、双向绑定、MVC框架 -->
+    <!-- vue主要是json数据+html片段+new一个vue的实例完成 -->
+    <div id="box">
+        {{message}}
+        <br>
+        <input type="text" name="i1" v-model="fname">
+        <br>
+        <input type="text" name="i1" v-model="fname">
+        <br>
+        {{news}}
+        <br>
+        <ul id="fruitList1">
+            <li v-for="(value,index) in arr">
+                <a href="#">
+                    {{value.name}},{{value.age}},{{index}}
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li v-for="(item,index) in json">
+                {{index}},{{item}}
+            </li>
+        </ul>
+        <br>
+        <button v-on:click="one()">点击我</button>
+        <div id="div1" style="display:block;width: 100px; height: 100px; background: Red;" v-show="a">我会消失</div>
+    </div>
+</body>
+</html>
